@@ -17,7 +17,7 @@ akvhandler.getSecret(keyVaultName, secretName)
   .catch((err) => {
     console.log({err})
   })
-  ```js
+  ```.js
 
 `keyVaultName` is the name given to the Azure Key Vault.
 `secretName` is the name of the secret with the version in this format: `my_secret/version` (to get the version, go to Azure Portal, then to the Key Vault and then to Secrets)
