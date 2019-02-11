@@ -7,7 +7,7 @@ Run this command:
 `npm install --save akv_handler`
 
 In your code:
-```
+```js
 var akvhandler = require('akvhandler')
 
 akvhandler.getSecret(keyVaultName, secretName)
