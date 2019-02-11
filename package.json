@@ -1,0 +1,21 @@
+{
+  "name": "akv_handler",
+  "version": "1.0.0",
+  "description": "Small utility to retrieve secrets from Azure Key Vault",
+  "main": "getKeys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Azure",
+    "Key",
+    "Vault",
+    "Secrets"
+  ],
+  "author": "Rafael Ochoa <ochoacabriles@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
