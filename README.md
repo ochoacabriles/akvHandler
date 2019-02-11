@@ -7,7 +7,7 @@ Run this command:
 `npm install --save akv_handler`
 
 In your code:
-```
+```js
 var akvhandler = require('akvhandler')
 
 akvhandler.getSecret(keyVaultName, secretName)
@@ -17,7 +17,7 @@ akvhandler.getSecret(keyVaultName, secretName)
   .catch((err) => {
     console.log({err})
   })
-  ```.js
+  ```
 
 `keyVaultName` is the name given to the Azure Key Vault.
 `secretName` is the name of the secret with the version in this format: `my_secret/version` (to get the version, go to Azure Portal, then to the Key Vault and then to Secrets)
