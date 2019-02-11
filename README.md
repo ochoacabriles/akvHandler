@@ -4,9 +4,10 @@ The function returns a Promise which resolves to the value of the secret, or rej
 
 Usage:
 Run this command:
-npm install --save akvhandler
+`npm install --save akv_handler`
 
-In the code:
+In your code:
+```
 var akvhandler = require('akvhandler')
 
 akvhandler.getSecret(keyVaultName, secretName)
@@ -16,3 +17,4 @@ akvhandler.getSecret(keyVaultName, secretName)
   .catch((err) => {
     console.log({err})
   })
+  ```
