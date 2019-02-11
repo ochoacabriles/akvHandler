@@ -1,6 +1,6 @@
 {
   "name": "akv_handler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Small utility to retrieve secrets from Azure Key Vault",
   "main": "getKeys.js",
   "scripts": {
