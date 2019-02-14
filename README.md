@@ -8,9 +8,9 @@ Run this command:
 
 In your code:
 ```js
-var akvhandler = require('akvhandler')
+var akvHandler = require('akv_handler')
 
-akvhandler.getSecret(keyVaultName, secretName)
+akvHandler.getSecret(keyVaultName, secretName)
   .then((secretValue) => {
     console.log({secretValue})
   })
