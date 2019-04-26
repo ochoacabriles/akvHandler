@@ -49,17 +49,15 @@ function retrieveSecret (token, secretName, keyVaultName) {
   })
 }
 
-module.exports.getSecret = (keyVaultName, secretName) => {
-  return new Promise((resolve, reject) => {
-    retrieveToken()
-      .then((token) => {
-        return retrieveSecret(token, secretName, keyVaultName)
-      })
-      .then((secretValue) => {
-        resolve(secretValue)
-      })
-      .catch((err) => {
-        reject(err)
-      })
+module.exports.getSecrets = (keyVaultName, secretsArray) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      var token = await retrieveToken()
+      const promises = secretsArray.map(retrieveSecret(token, secretName, keyVaultName))
+      retrievedSecrets = await Promise.all(promises)
+      resolve(retrieveSecrets)
+    } catch(err) {
+      reject(err)
+    }
   })
 }
