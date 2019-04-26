@@ -57,7 +57,7 @@ module.exports.getSecrets = (keyVaultName, secretsArray) => {
     try {
       var token = await retrieveToken()
       const promises = secretsArray.map(async (secretName) => {
-        return new Promise((resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
           try {
             var secret = await retrieveSecret(token, secretName, keyVaultName)
             resolve(secret)
