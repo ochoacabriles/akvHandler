@@ -40,7 +40,10 @@ function retrieveSecret (token, secretName, keyVaultName) {
     rp(passwordOptions)
       .then((responseKey) => {
         var keyObject = JSON.parse(responseKey.body)
-        var key = keyObject.value
+        var key = {
+          name: secretName,
+          value: keyObject.value
+        }
         resolve(key)
       })
       .catch((err) => {

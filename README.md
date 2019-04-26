@@ -1,6 +1,15 @@
 Small package to retrieve a secret from Azure Key Vault. The environment where this package will be used needs to have permissions to read Azure Key Vault Secrets in the specified account.
 
-The function returns a Promise which resolves to the value of the secret, or rejects to the err object.
+The function returns a Promise which resolves to an array of objects contenting the secret name and value for each one, or rejects to the err object.
+
+This is the form of the response object:
+
+```js
+[{
+  name: secretName,
+  value: secretValue
+}, ...]
+```
 
 Usage:
 Run this command:
@@ -10,9 +19,9 @@ In your code:
 ```js
 var akvHandler = require('akv_handler')
 
-akvHandler.getSecret(keyVaultName, secretName)
-  .then((secretValue) => {
-    console.log({secretValue})
+akvHandler.getSecret(keyVaultName, secretsArray)
+  .then((secretsAray) => {
+    console.log({secretsArray})
   })
   .catch((err) => {
     console.log({err})
