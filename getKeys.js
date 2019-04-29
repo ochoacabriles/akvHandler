@@ -67,7 +67,11 @@ module.exports.getSecrets = (keyVaultName, secretsArray) => {
         })
       })
       retrievedSecrets = await Promise.all(promises)
-      resolve(retrievedSecrets)
+      var resultsObject = {}
+      retrievedSecrets.forEach((secret) => {
+        resultsObject[secret.name] = secret.value
+      })
+      resolve(resultsObject)
     } catch(err) {
       reject(err)
     }
