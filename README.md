@@ -20,8 +20,8 @@ In your code:
 ```js
 var akvHandler = require('akv_handler')
 
-akvHandler.getSecret(keyVaultName, secretsArray)
-  .then((secretsAray) => {
+akvHandler.getSecrets(keyVaultName, secretsArray)
+  .then((secretsArray) => {
     console.log({secretsArray})
   })
   .catch((err) => {
