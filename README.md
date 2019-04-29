@@ -5,10 +5,11 @@ The function returns a Promise which resolves to an array of objects contenting 
 This is the form of the response object:
 
 ```js
-[{
-  name: secretName,
-  value: secretValue
-}, ...]
+{
+  secretsArray[0]: secretValue0,
+  secretsArray[1]: secretValue1,
+  ...
+}
 ```
 
 Usage:
